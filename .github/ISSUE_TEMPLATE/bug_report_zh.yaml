@@ -1,0 +1,108 @@
+name: 漏洞反馈
+title: "漏洞反馈:" # 默认标题
+description: 报告一个漏洞
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 在开始之前
+
+        🚨 **请务必按以下步骤操作** 🚨
+
+        1. 请确保在创建问题前更新仓库，运行以下任一命令：
+           - `.\git\bin\git.exe pull`
+           - `.\PortableGit\bin\git.exe pull`
+           - `git pull`
+           
+        2. 检查是否已有类似问题存在。
+
+        3. 请尽可能提供详细信息，包括崩溃日志（如有）。
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 版本信息
+      description: |
+        请提供 BallonsTranslator 的版本信息。请复制控制台显示的以下内容（如果信息消失，请保存项目并重启程序）：
+        - Python 版本及解释器路径
+        - 应用版本、分支及 Commit Hash
+
+        Please provide the version information of BallonsTranslator. Copy the following details from the console (displayed at startup). If the info is lost, save the project and restart the program:
+        - Python version and interpreter path
+        - Application version, branch, and Commit Hash
+      placeholder: |
+        示例:
+        py version: 3.10.9 (tags/v3.10.9:...)
+        py executable: 路径\到\解释器
+        version: 1.4.0
+        branch: dev
+        Commit hash: 53eee46fd7bef117a4ada9a86843c3bf6e37d953
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 问题描述
+      description: |
+        请详细描述问题，并提供复现步骤。
+  - type: markdown
+    attributes:
+      value: |
+        ### 受影响的模块
+        如果问题与特定模块相关，请选择相关项（如果不适用，请选择“无”）:
+  - type: dropdown
+    attributes:
+      label: 文本检测
+      options:
+        - ctd
+        - stariver_ocr
+  - type: dropdown
+    attributes:
+      label: OCR
+      options:
+        - google_lens
+        - manga_ocr
+        - mit32px
+        - mit48px_ctc
+        - mit48px
+        - stariver_ocr
+        - windows ocr
+  - type: dropdown
+    attributes:
+      label: Inpaint
+      options:
+        - opencv-tela
+        - patchmatch
+        - aot
+        - lama_mpe
+        - lama_large_512px
+  - type: dropdown
+    attributes:
+      label: 翻译器
+      options:
+        - Baidu
+        - Caiyun
+        - ChatGPT
+        - ChatGPT_exp
+        - DeepL
+        - DeepL Free
+        - DeepLX API
+        - google
+        - Papago
+        - Sakura
+  - type: textarea
+    attributes:
+      label: 屏幕截图
+      description: |
+        如果可能，请附上错误时的屏幕截图（可直接拖拽图片）。
+  - type: textarea
+    attributes:
+      label: 日志
+      description: |
+        请复制粘贴日志内容（内容会自动格式化为代码块）。
+      render: shell
+  - type: textarea
+    attributes:
+      label: 其他信息
+      description: |
+        其他你想提供的信息。

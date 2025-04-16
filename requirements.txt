@@ -1,0 +1,58 @@
+# To install pytorch cuda (gpu) version, please look https://pytorch.org/
+
+PyQt6-Qt6>=6.6.2,<6.7.0 ; python_version > "3.8"
+PyQt6>=6.6.1,<6.7.0 ; python_version > "3.8"
+PyQt5-Qt5>=5.15.2 ; python_version <= "3.8"
+PyQt5>=5.15.10 ; python_version <= "3.8"
+numpy<2
+urllib3; sys_platform == 'win32' # https://github.com/psf/requests/issues/5740
+urllib3; sys_platform == 'darwin' # fix urllib3.package.six.move module not found error
+jaconv
+torch
+torchvision
+transformers
+mecab-python3; sys_platform == 'darwin'
+fugashi
+unidic_lite
+tqdm
+opencv-python>=4.8.1.78; sys_platform == 'win32' or sys_platform == 'linux'
+opencv-python>=4.8.1.78,<=4.10.0.82 ; sys_platform == 'darwin'
+shapely
+pyclipper
+einops
+termcolor
+bs4
+deepl>=1.16.0
+qtpy
+spacy-pkuseg
+sentencepiece
+ctranslate2
+python-docx
+docx2txt
+piexif
+keyboard
+ordered-set
+opencc-python-reimplemented
+requests
+ultralytics==8.3.90
+beautifulsoup4
+colorama
+openai>=1.59.5
+pyyaml
+natsort
+py7zr
+multivolumefile
+httpx[socks,brotli]
+langdetect
+translators==5.9.5
+json5
+pywin32; sys_platform == 'win32'
+winsdk; sys_platform == 'win32'
+brotlicffi; sys_platform == 'win32'
+pyobjc-core; sys_platform == 'darwin'
+pyobjc-framework-cocoa; sys_platform == 'darwin'
+pyobjc-framework-coreml; sys_platform == 'darwin'
+pyobjc-framework-quartz; sys_platform == 'darwin'
+pyobjc-framework-vision; sys_platform == 'darwin'
+msl-loadlib
+betterproto

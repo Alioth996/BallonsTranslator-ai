@@ -1,0 +1,59 @@
+name: 功能建议
+title: "Feature Request:" # 默认标题
+description: 提出新功能或优化建议
+labels: [feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 在开始之前
+
+        🚨 **请务必按以下步骤操作** 🚨
+
+        1. 请确保在提交建议前更新仓库，运行以下任一命令：
+           - `.\git\bin\git.exe pull`
+           - `.\PortableGit\bin\git.exe pull`
+           - `git pull`
+           
+        2. 检查是否已有类似建议存在。
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 版本信息
+      description: |
+        请提供 BallonsTranslator 的版本信息。请复制控制台显示的以下内容（如果信息消失，请保存项目并重启程序）：
+        - Python 版本及解释器路径
+        - 应用版本、分支及 Commit Hash
+      placeholder: |
+        示例:
+        py version: 3.10.9 (tags/v3.10.9:...)
+        py executable: 路径\到\解释器
+        version: 1.4.0
+        branch: dev
+        Commit hash: 53eee46fd7bef117a4ada9a86843c3bf6e37d953
+  - type: dropdown
+    validations:
+      required: true
+    attributes:
+      label: 建议类型
+      options:
+        - 新功能
+        - 功能优化
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: 描述
+      description: |
+        请详细描述你希望添加或改进的功能。
+  - type: textarea
+    attributes:
+      label: 图片
+      description: |
+        如果可能，请附上相关示例或界面截图（可直接拖拽图片）。
+  - type: textarea
+    attributes:
+      label: 其他信息
+      description: |
+        其他你想提供的信息。

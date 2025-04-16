@@ -1,0 +1,59 @@
+name: Feature Request
+title: "Feature Request:" # Default title
+description: Propose new features or optimizations
+labels: [feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before You Begin
+
+        🚨 **Please follow these steps before creating an issue** 🚨
+
+        1. Ensure your repository is up-to-date by running one of the following commands:
+           - `.\git\bin\git.exe pull`
+           - `.\PortableGit\bin\git.exe pull`
+           - `git pull`
+           
+        2. Check if a similar feature request already exists.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Version Info
+      description: |
+        Please provide the version information of BallonsTranslator. Copy the following details from the console output (if missing, save your project and restart the application):
+        - Python version and interpreter path
+        - Application version, branch, and Commit Hash
+      placeholder: |
+        Example:
+        py version: 3.10.9 (tags/v3.10.9:...)
+        py executable: Path\to\interpreter
+        version: 1.4.0
+        branch: dev
+        Commit hash: 53eee46fd7bef117a4ada9a86843c3bf6e37d953
+  - type: dropdown
+    validations:
+      required: true
+    attributes:
+      label: Type of Request
+      options:
+        - New Feature
+        - Feature Optimization
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Description
+      description: |
+        Please describe the feature or improvement you would like to see.
+  - type: textarea
+    attributes:
+      label: Pictures
+      description: |
+        If possible, attach relevant examples or UI screenshots (you can drag and drop the image).
+  - type: textarea
+    attributes:
+      label: Additional Information
+      description: |
+        Any additional information you would like to provide.
